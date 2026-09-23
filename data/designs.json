@@ -1,0 +1,45 @@
+[
+    {
+        "id": "stacked-iron-farm",
+        "title": "Stacked Iron Farm",
+
+        "type": "farm",
+
+        "author": "Minecraft Tech Archive",
+
+        "minecraft": {
+            "edition": "Java",
+            "versions": [
+                "1.21"
+            ]
+        },
+
+        "tags": [
+            "iron",
+            "villager",
+            "farm",
+            "golem"
+        ],
+
+        "description": "A vertically stacked iron farm design.",
+
+        "dimensions": {
+            "x": 19,
+            "y": 18,
+            "z": 19
+        },
+
+        "files": [
+            {
+                "name": "Litematic",
+                "type": "litematic",
+                "url": "downloads/stacked-iron-farm.litematic"
+            },
+            {
+                "name": "Schematic",
+                "type": "schem",
+                "url": "downloads/stacked-iron-farm.schem"
+            }
+        ]
+    }
+]
