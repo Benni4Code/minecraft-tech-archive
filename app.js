@@ -1,43 +1,41 @@
-let entries = [];
+let designs = [];
 
-async function loadEntries() {
-    const response = await fetch("data/entries.json");
+async function loadDesigns() {
+    const response = await fetch("data/designs.json");
+    designs = await response.json();
 
-    entries = await response.json();
-
-    displayEntries(entries);
+    displayDesigns(designs);
 }
 
 
-function displayEntries(results) {
+function displayDesigns(results) {
 
     const container = document.getElementById("results");
 
     container.innerHTML = "";
 
-    if (results.length === 0) {
-        container.innerHTML = "<p>No results found.</p>";
-        return;
-    }
-
-    for (const entry of results) {
+    for (const design of results) {
 
         const element = document.createElement("div");
 
         element.className = "entry";
 
         element.innerHTML = `
-            <h2>${entry.title}</h2>
+            <h2>${design.title}</h2>
 
-            <p>${entry.summary}</p>
+            <p>${design.description}</p>
 
             <p>
-                <strong>${entry.category}</strong>
+                <strong>${design.type}</strong>
             </p>
 
             <p class="tags">
-                ${entry.tags.join(" • ")}
+                ${design.tags.join(" • ")}
             </p>
+
+            <a href="design.html?id=${design.id}">
+                View Design →
+            </a>
         `;
 
         container.appendChild(element);
@@ -49,20 +47,20 @@ document.getElementById("search").addEventListener("input", function () {
 
     const query = this.value.toLowerCase();
 
-    const results = entries.filter(entry => {
+    const results = designs.filter(design => {
 
         const searchableText = `
-            ${entry.title}
-            ${entry.category}
-            ${entry.summary}
-            ${entry.tags.join(" ")}
+            ${design.title}
+            ${design.description}
+            ${design.type}
+            ${design.tags.join(" ")}
         `.toLowerCase();
 
         return searchableText.includes(query);
     });
 
-    displayEntries(results);
+    displayDesigns(results);
 });
 
 
-loadEntries();
+loadDesigns();
