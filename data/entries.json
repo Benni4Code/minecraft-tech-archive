@@ -1,0 +1,51 @@
+[
+    {
+        "id": "iron-golem-spawning",
+        "title": "Iron Golem Spawning",
+        "category": "Mechanics",
+        "tags": [
+            "iron",
+            "villager",
+            "golem",
+            "spawning",
+            "farms"
+        ],
+        "versions": [
+            "1.20",
+            "1.21"
+        ],
+        "summary": "Technical information about the conditions under which iron golems can spawn."
+    },
+    {
+        "id": "hopper",
+        "title": "Hopper",
+        "category": "Redstone",
+        "tags": [
+            "hopper",
+            "items",
+            "redstone",
+            "storage"
+        ],
+        "versions": [
+            "1.20",
+            "1.21"
+        ],
+        "summary": "Technical information about hopper item transfer, cooldowns and interactions."
+    },
+    {
+        "id": "random-ticks",
+        "title": "Random Ticks",
+        "category": "Mechanics",
+        "tags": [
+            "ticks",
+            "random tick",
+            "growth",
+            "mechanics"
+        ],
+        "versions": [
+            "1.20",
+            "1.21"
+        ],
+        "summary": "How Minecraft's random tick system affects blocks and game mechanics."
+    }
+]
